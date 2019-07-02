@@ -1,0 +1,174 @@
+
+
+"
+
+    [Congressional Bills 112th Congress]
+
+    [From the U.S. Government Printing Office]
+
+    [H.R. 4 Enrolled Bill (ENR)]
+
+    
+
+            H.R.4
+
+    
+
+                          One Hundred Twelfth Congress
+
+    
+
+                                     of the
+
+    
+
+                            United States of America
+
+    
+
+    
+
+                              AT THE FIRST SESSION
+
+    
+
+             Begun and held at the City of Washington on Wednesday,
+
+                the fifth day of January, two thousand and eleven
+
+    
+
+    
+
+                                     An Act
+
+    
+
+    
+
+     
+
+       To repeal the expansion of information reporting requirements for 
+
+        payments of $600 or more to corporations, and for other purposes.
+
+    
+
+        Be it enacted by the Senate and House of Representatives of the 
+
+    United States of America in Congress assembled,
+
+    SECTION 1. SHORT TITLE.
+
+        This Act may be cited as the ``Comprehensive 1099 Taxpayer 
+
+    Protection and Repayment of Exchange Subsidy Overpayments Act of 
+
+    2011''.
+
+    SEC. 2. REPEAL OF EXPANSION OF INFORMATION REPORTING REQUIREMENTS TO 
+
+    PAYMENTS MADE TO CORPORATIONS AND TO PAYMENTS FOR PROPERTY AND OTHER 
+
+    GROSS PROCEEDS.
+
+        (a) Application to Corporations.--Section 6041 of the Internal 
+
+    Revenue Code of 1986 is amended by striking subsections (i) and (j).
+
+        (b) Payments for Property and Other Gross Proceeds.--Subsection (a) 
+
+    of section 6041 of such Code is amended--
+
+            (1) by striking ``amounts in consideration for property,'', and
+
+            (2) by striking ``gross proceeds,'' both places it appears.
+
+        (c) Effective Date.--The amendments made by this section shall 
+
+    apply to payments made after December 31, 2011.
+
+    SEC. 3. REPEAL OF EXPANSION OF INFORMATION REPORTING REQUIREMENTS FOR 
+
+    RENTAL PROPERTY EXPENSE PAYMENTS.
+
+        (a) In General.--Section 6041 of the Internal Revenue Code of 1986 
+
+    is amended by striking subsection (h).
+
+        (b) Effective Date.--The amendment made by this section shall apply 
+
+    to payments made after December 31, 2010.
+
+    SEC. 4. INCREASE IN AMOUNT OF OVERPAYMENT OF HEALTH CARE CREDIT WHICH 
+
+    IS SUBJECT TO RECAPTURE.
+
+        (a) In General.--Clause (i) of section 36B(f)(2)(B) of the Internal 
+
+    Revenue Code of 1986 is amended to read as follows:
+
+                    ``(i) In general.--In the case of a taxpayer whose 
+
+                household income is less than 400 percent of the poverty 
+
+                line for the size of the family involved for the taxable 
+
+                year, the amount of the increase under subparagraph (A) 
+
+                shall in no event exceed the applicable dollar amount 
+
+                determined in accordance with the following table (one-half 
+
+                of such amount in the case of a taxpayer whose tax is 
+
+                determined under section 1(c) for the taxable year):
+
+    
+
+    
+
+    ----------------------------------------------------------------------------------------------------------------
+
+      ``If the household income (expressed as a
+
+             percent of poverty line) is:                           The applicable dollar amount is:
+
+    ----------------------------------------------------------------------------------------------------------------
+
+    Less than 200%...............................  $600
+
+    At least 200% but less than 300%.............  $1,500
+
+    At least 300% but less than 400%.............  $2,500.''.
+
+    ----------------------------------------------------------------------------------------------------------------
+
+    
+
+    
+
+    ''.    (b) Effective Date.--The amendment made by this section shall 
+
+    apply to taxable years ending after December 31, 2013.
+
+    
+
+                                   Speaker of the House of Representatives.
+
+    
+
+                                Vice President of the United States and    
+
+                                                   President of the Senate.
+
+    
+
+
+
+"
+
+
+
+ENDENDEND
+

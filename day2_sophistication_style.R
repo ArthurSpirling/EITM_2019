@@ -1,10 +1,10 @@
-#7/5/2018
+#7/12/2019
 #Day 2 of EITM
 
 rm(list=ls())
 require(quanteda)
 require(readtext)
-
+require(stylest)
 
 #lets grab ~24 House Bills as data
 rt <- readtext("house_bills/*")
@@ -78,35 +78,10 @@ boot_doc <- function(document=my.corpus[1],nboot=50){
 #so, for example, 
 boot_h2 <- boot_doc(my.corpus[2], nboot=5) 
 
-######################
-# BASIC STYLOMETRICS #
-######################
-
-#some texts by Austen
-austen <- corpus(readtext("austen_texts/*.txt", docvarsfrom=c("filenames")) )
-#some texts by Dickens
-dickens <- corpus(readtext("dickens_texts/*.txt",  docvarsfrom=c("filenames")) )
-
-#a mystery text
-mystery <- corpus(readtext("mystery/*.txt" ))
-
-#let's look at some key function words
-# and make the DTMs with those in mind
-# (from Peng and Hengartner)
-func.words <- c('the', 'may', 'which', 'not', 'be', 'upon')
-
-
-austen.dfm <- dfm(austen, select=func.words)
-dickens.dfm <- dfm(dickens, select=func.words)
-mystery.dfm <- dfm(mystery, select=func.words)
-
-#then, inspect (takes means)
-apply( austen.dfm/rowSums(as.matrix(austen.dfm)), 2, mean) 
-#vs 
-apply(dickens.dfm/rowSums(as.matrix(dickens.dfm)), 2, mean)
-#vs
-mystery.dfm/rowSums(as.matrix(mystery.dfm)) 
-##--> who looks like most plausible author?
+#############################
+# look at Google books freq #
+#############################
+devtools::install_github("kbenoit/sophistication")
 
 
 #####################
@@ -121,8 +96,31 @@ mystery.dfm/rowSums(as.matrix(mystery.dfm))
 # stylest          #
 ####################
 
-devtools::install_github("leslie-huang/stylest")
 #https://github.com/leslie-huang/stylest/blob/master/vignettes/stylest-vignette.md
+
+#let's build a model
+
+#first, make a decision about how to treat texts
+filter <- corpus::text_filter(drop_punct = TRUE, drop_number = TRUE)
+# let's use 80th percentile for terms
+terms_80 <- stylest_terms(novels_excerpts$text, novels_excerpts$author, 80, filter = filter)
+# make the model
+mod <- stylest_fit(novels_excerpts$text, novels_excerpts$author, terms = terms_80, filter = filter)
+
+# let's look at influential terms for this (very simple) model
+influential_terms <- stylest_term_influence(mod, novels_excerpts$text, novels_excerpts$author)
 
 #note that you can feed your own work in as a "new text" and then do 
 #stylest_predict()
+
+na_text <- "No one who had ever seen Catherine Morland in her infancy would have supposed 
+            her born to be an heroine. Her situation in life, the character of her father 
+            and mother, her own person and disposition, were all equally against her. Her 
+            father was a clergyman, without being neglected, or poor, and a very respectable 
+            man, though his name was Richard-and he had never been handsome. He had a 
+            considerable independence besides two good livings-and he was not in the least 
+            addicted to locking up his daughters."
+
+pred <- stylest_predict(mod, na_text)
+
+

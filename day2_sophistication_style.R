@@ -2,9 +2,14 @@
 #Day 2 of EITM
 
 rm(list=ls())
+require(devtools)
+#note to self: odd install error for glue and backport, solved by installing
+# directly
 require(quanteda)
 require(readtext)
 require(stylest)
+
+
 
 #lets grab ~24 House Bills as data
 rt <- readtext("house_bills/*")
@@ -34,13 +39,31 @@ R <- ntypes_G/sqrt(ntokens_G)
 rf <- textstat_readability(my.corpus, c("Flesch","Dale.Chall.old"))
 
 #weird things can happen --
-sentance <- "These include capital expenditures by the Rural Electrification 
+sentence <- "These include capital expenditures by the Rural Electrification 
 Administration and expenditures for resource development by other 
 organizational units in the Department of Agriculture 
 which are also mentioned above under 'agricultural programs.' "
 
-textstat_readability(sentance, measure='Flesch')
+textstat_readability(sentence, measure='Flesch')
 #hmm...
+
+#quick look at "sophistication"
+devtools::install_github("kbenoit/sophistication")
+require(sophistication)
+
+#lets look up how common "husbandry" is
+print(covars_make_baselines("husbandry", baseline_year=2000))
+#note that min_ and mean_ are same bec it's just doing a lookup of one word
+# can compare to something more common:
+print(covars_make_baselines("husband", baseline_year=2000))
+
+#can access matrix of aggregated counts by decade if required.
+# for example, let's get the counts of "husbandry"
+husbandry.counts <- data_matrix_google1grams[which(rownames(data_matrix_google1grams)=="husbandry"),]
+#and for "the"
+the.counts <- data_matrix_google1grams[which(rownames(data_matrix_google1grams)=="the"),]
+
+print(husbandry.counts/the.counts) #this is as above for covars_make_baselines
 
 #################
 # BOOTSTRAPPING #

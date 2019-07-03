@@ -124,3 +124,9 @@ na_text <- "No one who had ever seen Catherine Morland in her infancy would have
 pred <- stylest_predict(mod, na_text)
 
 
+############################
+# Working with Embeddings  #
+############################
+
+# try the crowdsource task: 
+# https://semantica.shinyapps.io/Triad-Task/

@@ -153,3 +153,37 @@ pred <- stylest_predict(mod, na_text)
 
 # try the crowdsource task: 
 # https://semantica.shinyapps.io/Triad-Task/
+
+
+# load libraries ---
+library(stringr)  # manipulate strings
+library(text2vec)  # GloVe package
+
+# load data ---
+word_vectors <- readRDS("https://www.dropbox.com/sh/zb3sxdrkvxyasuo/AAAhSlxOU-RSAhGXtg6fn2C3a?dl=0")
+
+# nearest neighbors function ---
+#' Return nearest neighbors based on cosine similarity
+#'
+#' @param embeds matrix of embeddings
+#' @param cue cue word for which cosine distances will be computed
+#' @param N number of nearest neighbors to return
+#' @param norm character = c("l2", "none") - how to scale input matrices. If they already scaled - use "none" (see ?sim2)
+#' @return a character vector of nearest neighbors to cue word
+#' @export
+# required packages: text2vec, stringr
+nearest_neighbors <- function(cue, embeds, N = 5, norm = "l2"){
+  cos_sim <- sim2(x = embeds, y = embeds[cue, , drop = FALSE], method = "cosine", norm = norm)
+  nn <- cos_sim <- cos_sim[order(-cos_sim),]
+  return(names(nn)[2:(N + 1)])  # cue is always the nearest neighbor hence dropped
+}
+
+# example ---
+nearest_neighbors("welfare", embeds = word_vectors, N = 5, norm = "l2")
+
+
+
+
+
+
+

@@ -1,5 +1,6 @@
 #7/12/2019
 #Day 2 of EITM
+# setwd to wherever you are working
 
 rm(list=ls())
 require(devtools)
@@ -162,7 +163,8 @@ library(stringr)  # manipulate strings
 library(text2vec)  # GloVe package
 
 # load data ---
-word_vectors <- readRDS("https://www.dropbox.com/sh/zb3sxdrkvxyasuo/AAAhSlxOU-RSAhGXtg6fn2C3a?dl=0")
+# it's here: https://www.dropbox.com/sh/zb3sxdrkvxyasuo/AAAhSlxOU-RSAhGXtg6fn2C3a?dl=0
+word_vectors <- readRDS("C:/Users/as9934/Dropbox/EITM_2019_data/glove.rds")
 
 # nearest neighbors function ---
 #' Return nearest neighbors based on cosine similarity

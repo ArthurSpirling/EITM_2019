@@ -137,14 +137,16 @@ influential_terms <- stylest_term_influence(mod, novels_excerpts$text, novels_ex
 #stylest_predict()
 
 na_text <- "No one who had ever seen Catherine Morland in her infancy would have supposed 
-            her born to be an heroine. Her situation in life, the character of her father 
-            and mother, her own person and disposition, were all equally against her. Her 
-            father was a clergyman, without being neglected, or poor, and a very respectable 
-            man, though his name was Richard-and he had never been handsome. He had a 
-            considerable independence besides two good livings-and he was not in the least 
-            addicted to locking up his daughters."
+her born to be an heroine. Her situation in life, the character of her father 
+and mother, her own person and disposition, were all equally against her. Her 
+father was a clergyman, without being neglected, or poor, and a very respectable 
+man, though his name was Richard-and he had never been handsome. He had a 
+considerable independence besides two good livings-and he was not in the least 
+addicted to locking up his daughters."
 
 pred <- stylest_predict(mod, na_text)
+
+
 
 
 ############################

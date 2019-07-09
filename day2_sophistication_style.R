@@ -102,11 +102,6 @@ boot_doc <- function(document=my.corpus[1],nboot=50){
 #so, for example, 
 boot_h2 <- boot_doc(my.corpus[2], nboot=5) 
 
-#############################
-# look at Google books freq #
-#############################
-devtools::install_github("kbenoit/sophistication")
-
 
 #####################
 # M & W replication #
@@ -164,7 +159,7 @@ library(text2vec)  # GloVe package
 
 # load data ---
 # it's here: https://www.dropbox.com/sh/zb3sxdrkvxyasuo/AAAhSlxOU-RSAhGXtg6fn2C3a?dl=0
-word_vectors <- readRDS("C:/Users/as9934/Dropbox/EITM_2019_data/glove.rds")
+word_vectors <- readRDS("C:/Users/arthur spirling/Dropbox/EITM_2019_data/glove.rds")
 
 # nearest neighbors function ---
 #' Return nearest neighbors based on cosine similarity
